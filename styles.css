@@ -13,6 +13,10 @@ header img {
     width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
 }
 
+header p {
+    margin-bottom: 20px;
+}
+
 main {
     text-align: center;
     padding: 20px;
