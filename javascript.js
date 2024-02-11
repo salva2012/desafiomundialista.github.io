@@ -1,28 +1,23 @@
-// Capturamos el formulario de comentarios
+// Código JavaScript previamente definido
+
+// Seleccionar el formulario de comentarios y la lista de comentarios
 const commentForm = document.getElementById('commentForm');
+const commentList = document.getElementById('commentList');
 
-// Capturamos la sección de comentarios
-const commentSection = document.getElementById('commentSection');
+// Función para agregar un comentario
+function addComment(comment) {
+    const li = document.createElement('li');
+    li.textContent = comment;
+    commentList.appendChild(li);
+}
 
-// Función para manejar el envío de comentarios
+// Evento para enviar el formulario de comentarios
 commentForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenimos el comportamiento predeterminado del formulario
-    const name = document.getElementById('name').value;
-    const comment = document.getElementById('comment').value;
-
-    if (name && comment) {
-        // Creamos un nuevo elemento de comentario
-        const newComment = document.createElement('div');
-        newComment.classList.add('comment');
-        newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
-        
-        // Agregamos el comentario a la sección de comentarios
-        commentSection.appendChild(newComment);
-
-        // Limpiamos los campos del formulario
-        document.getElementById('name').value = '';
-        document.getElementById('comment').value = '';
-    } else {
-        alert('Por favor ingresa tu nombre y tu comentario.');
+    event.preventDefault();
+    const commentInput = document.getElementById('commentInput');
+    const commentText = commentInput.value.trim();
+    if (commentText !== '') {
+        addComment(commentText);
+        commentInput.value = '';
     }
 });
