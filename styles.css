@@ -1,41 +1,24 @@
 /* Estilos previamente definidos */
 
-.comments form {
+.header-content {
+    text-align: center;
+}
+
+.header-content img {
+    width: 100px;
     margin-bottom: 20px;
 }
 
-.comments form input[type="text"] {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+header p {
+    margin-bottom: 20px;
 }
 
-.comments form button {
-    padding: 8px 20px;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-.comments form button:hover {
-    background-color: #0056b3;
-}
-
-.comments ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.comments li {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-.comments li:last-child {
-    border-bottom: none;
+    margin-bottom: 20px;
 }
